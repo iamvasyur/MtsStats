@@ -23,7 +23,7 @@ public class WordCount {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
  
-        job.setMapperClass(MapperExample.class); 
+        job.setMapperClass(DeltaMapper.class); 
         job.setReducerClass(ReducerExample.class);  
  
         job.setInputFormatClass(TextInputFormat.class);

@@ -8,12 +8,12 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-public class MapperExample extends Mapper<Object, Text, Text, IntWritable> {
+public class RateMapper extends Mapper<Object, Text, Text, IntWritable> {
 	
  private Text word = new Text();
  private final static IntWritable one = new IntWritable(1);
 
- private static final Log LOG = LogFactory.getLog(MapperExample.class);
+ private static final Log LOG = LogFactory.getLog(RateMapper.class);
  
   
  @Override
