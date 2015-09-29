@@ -13,7 +13,7 @@ public class VolumeReducer extends Reducer<Text, LongWritable, Text, LongWritabl
 	
 	
 	
-	public Log LOG = LogFactory.getLog(DeltaReducer.class);
+	public Log LOG = LogFactory.getLog(VolumeReducer.class);
 
     public void reduce(Text key, Iterable<LongWritable> values,
             Context context)
@@ -22,7 +22,6 @@ public class VolumeReducer extends Reducer<Text, LongWritable, Text, LongWritabl
     	  Iterator<LongWritable> it=values.iterator();
     	  while (it.hasNext()) {	  
     	   wordCount += it.next().get();
-    	   LOG.info("++++++++++++++++++++++++++++++"+wordCount);
     	  }
     	  context.write(key, new LongWritable(wordCount));
     	 }
