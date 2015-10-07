@@ -48,7 +48,6 @@ Text, LongWritable> {
         		context.write(new Text(date), new LongWritable(volume));
         		
         	}else {
-        		LOG.info("====   "+document);
         		return;
         	}
         	

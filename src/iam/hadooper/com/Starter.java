@@ -32,7 +32,7 @@ public class Starter {
 		job.setJarByClass(Starter.class);
 	    job.setOutputKeyClass(Text.class);
 	    job.setOutputValueClass(LongWritable.class);
-	    job.setMapperClass(VolumeMapper.class);
+	    job.setMapperClass(PacedMapper.class);
 	    job.setReducerClass(VolumeReducer.class);
 	    
 	    
